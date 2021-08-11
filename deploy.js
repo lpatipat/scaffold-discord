@@ -1,7 +1,7 @@
 const { REST } = require("@discordjs/rest");
 const { Routes } = require("discord-api-types/v9");
 
-const { token, labId, clientId } = require("./config.json");
+const { token, guildId, clientId } = require("./config.json");
 const { client } = require("./discord-client.js");
 
 /* 
@@ -18,7 +18,7 @@ const rest = new REST({ version: "9" }).setToken(token);
   try {
     console.log("Started refreshing application (/) commands.");
 
-    await rest.put(Routes.applicationGuildCommands(clientId, labId), {
+    await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
       body: commands,
     });
 

@@ -1,0 +1,5 @@
+{
+  "token": "your-bot-token",
+  "guildId": "your-server-id",
+  "clientId": "your-cient-id"
+}
